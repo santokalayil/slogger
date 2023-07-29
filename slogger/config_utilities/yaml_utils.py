@@ -136,6 +136,9 @@ def create_default_configuration_file():
 
     )
 
+    if not CONFIG_DIR.is_dir():
+        CONFIG_DIR.mkdir()
+
     config_filepath = os.path.join(CONFIG_DIR, CONFIG_FILE)
 
     with open(config_filepath, 'w') as f:

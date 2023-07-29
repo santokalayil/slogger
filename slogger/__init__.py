@@ -1,4 +1,9 @@
 from .logging import SLogger
 
-# this also will work
-# from execution_log_processor.log import _EzeAutoLogger as EzeAutoLogger
+from .paths import CONFIG_FILEPATH
+
+from .config_utilities.yaml_utils import create_default_configuration_file
+
+
+if not CONFIG_FILEPATH.is_file():
+    create_default_configuration_file()
