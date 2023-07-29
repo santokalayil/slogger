@@ -1,4 +1,4 @@
-from .logging import SLogger
+from .logging import _SLogger as SLogger
 
 from .paths import CONFIG_FILEPATH
 

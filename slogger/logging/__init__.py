@@ -7,7 +7,7 @@ from .handlers.file_handler import FileHandler
 from .handlers.console_handler import ConsoleHandler
 
 
-class SLogger(logging.getLoggerClass()):
+class _SLogger(logging.getLoggerClass()):
 
     def __init__(self, name, logfilepath, level=logging.NOTSET) -> None:
         super().__init__(name, level)
